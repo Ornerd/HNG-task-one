@@ -11,7 +11,10 @@
     <main>
         <article class="profile-card" data-testid="test-profile-card">
             <header class="profile-header">
-                <img src="https://hotel-booking-sample-app.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FScreenshot_20240715-034051_1.72b060dc.jpg&w=750&q=75" alt="Profile avatar" class="profile-image" data-testid="test-user-avatar">
+                <figure>
+                    <img src="https://hotel-booking-sample-app.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FScreenshot_20240715-034051_1.72b060dc.jpg&w=750&q=75" alt="Profile avatar" class="profile-image" data-testid="test-user-avatar">
+                </figure>
+                
                 
                 <div>
                     <h1 class="profile-name" data-testid="test-user-name">Obong-Essiet Uko</h1>
@@ -24,7 +27,9 @@
             <hr>
 
             <nav data-testid="test-user-social-links" class="social-links">
-                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.linkedin.com/in/obong-uko" target="_blank" rel="noopener noreferrer">linkedin</a>
+                <a href="https://github.com/Ornerd" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://x.com/Orbytall_" target="_blank" rel="noopener noreferrer">Twitter</a>
             </nav>
 
             <hr>
@@ -32,7 +37,7 @@
             <div class="hobbies-and-dislikes">
                 <section class="hobbies-section">
                     <h2>Hobbies</h2>
-                    <ul>
+                    <ul data-testid="test-user-hobbies">
                         <li>Coding and design</li>
                         <li>watching vlogs</li>
                         <li>Working out</li>
@@ -42,7 +47,7 @@
 
                 <section class="dislikes-section">
                     <h2>Dislikes</h2>
-                    <ul>
+                    <ul data-testid="test-user-dislikes">
                         <li>Stagnancy</li>
                         <li>Dishonesty</li>
                         <li>Laziness</li>
@@ -54,6 +59,6 @@
         </article>
     </main>
 
-
+<script src="main.js"></script>
 </body>
 </html>
