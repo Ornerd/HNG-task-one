@@ -117,8 +117,12 @@ form {
         /* margin-bottom: 14px; */
         display: flex;
         flex-direction: column;
-        gap: 10px;
     }
+
+
+form label {
+    margin-bottom: 6px;
+}
 
 input , textarea {
     padding: 10px;
@@ -127,6 +131,16 @@ input , textarea {
     border-radius: 4px;
     font-family: inherit;
 }
+
+input:user-invalid, textarea:user-invalid {
+    border-color: rgb(124, 0, 0);
+}
+
+form span {
+    color: rgb(124, 0, 0);
+    font-size: 0.9rem;
+}
+
 
 form button {
     width: 120px;
@@ -142,6 +156,15 @@ form button {
 
 form button:hover {
     background-color: #444;
+}
+
+.success-message {
+    width: 85vw;
+    max-width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    color: green;
+    font-weight: 600;
 }
 
 

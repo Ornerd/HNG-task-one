@@ -15,34 +15,41 @@
 
     <h2 class="hor-centered">I can't wait to hear from you!</h2>
 
+    <div class="success-message">
+        <p data-testid="test-contact-success" id="success-message" class="success-message" style="display: none;">Thanks, Your information has been receieved.</p>
+    </div>
+
     <form novalidate class="contact-form" data-testid="test-contact-form">
+
+
         <div class="form-group">
             <label for="name">Full name:</label>
-            <input data-testid="test-contact-name" type="text" id="name" name="name" required>
-            <span data-testid="test-contact-error-name"></span>
+            <input data-testid="test-contact-name" type="text" id="name" name="name" aria-describedby="full-name-error" required>
+            <span id="full-name-error" data-testid="test-contact-error-name"></span>
         </div>
 
         <div class="form-group">
-             <label for="email">Email:</label>
-            <input data-testid="test-contact-email" type="email" id="email" name="email" required>
-            <span data-testid="test-contact-error-email"></span>
+            <label for="email">Email:</label>
+            <input data-testid="test-contact-email" type="email" id="email" name="email" data-error="Please enter a valid email" aria-describedby="email-error" required>
+            <span data-testid="test-contact-error-email" id="email-error"></span>
         </div>
        
         <div class="form-group">
             <label for="subject">Subject:</label>
-            <input data-testid="test-contact-subject" type="text" id="subject" name="subject" required>
-            <span data-testid="test-contact-error-subject"></span>
+            <input data-testid="test-contact-subject" type="text" id="subject" name="subject" aria-describedby="subject-error" required>
+            <span data-testid="test-contact-error-subject" id="subject-error"></span>
         </div>
 
         <div class="form-group">
             <label for="message">Message:</label>
-            <textarea data-testid="test-contact-message" id="message" name="message" rows="4" cols="50" required></textarea>
-            <span data-testid="test-contact-error-message"></span>
+            <textarea data-testid="test-contact-message" id="message" minlength="10" name="message" rows="4" cols="50" data-error="Message should be no shorter than 10 characters" aria-describedby="message-error" required></textarea>
+            <span data-testid="test-contact-error-message" id="message-error"></span>
         </div>
         
 
         <Button type="submit" data-testid="test-contact-submit" >Submit</Button>
     </form>
+    
 
 
     <script src="/myForm.js"></script>
