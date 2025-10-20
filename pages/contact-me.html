@@ -18,21 +18,33 @@
     <form novalidate class="contact-form" data-testid="test-contact-form">
         <div class="form-group">
             <label for="name">Full name:</label>
-            <input type="text" id="name" name="name" required>
+            <input data-testid="test-contact-name" type="text" id="name" name="name" required>
+            <span data-testid="test-contact-error-name"></span>
         </div>
 
+        <div class="form-group">
+             <label for="email">Email:</label>
+            <input data-testid="test-contact-email" type="email" id="email" name="email" required>
+            <span data-testid="test-contact-error-email"></span>
+        </div>
+       
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input data-testid="test-contact-subject" type="text" id="subject" name="subject" required>
+            <span data-testid="test-contact-error-subject"></span>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea data-testid="test-contact-message" id="message" name="message" rows="4" cols="50" required></textarea>
+            <span data-testid="test-contact-error-message"></span>
+        </div>
+        
 
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-
-        <Button>Submit</Button>
+        <Button type="submit" data-testid="test-contact-submit" >Submit</Button>
     </form>
 
+
+    <script src="/myForm.js"></script>
 </body>
 </html>
