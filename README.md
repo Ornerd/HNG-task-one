@@ -1,5 +1,7 @@
 This is a profile card as required for the preliminaries of the HNG 13 internship.
 
+a contact-me form and about section has been added to the page, alongside a visible navbar for easy navigation.
+
 to run locally, 
 
 1. Clone this github repository in your local IDE.
